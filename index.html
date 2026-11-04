@@ -1,8 +1,65 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101010"><meta name="description" content="Saittoo.ink — Camila Saito, tattoo artist in Echizen, Fukui, Japan."><title>Saittoo.ink | Camila Saito</title><style>
-:root{--bg:#101010;--fg:#f4f0eb;--muted:#aaa;--red:#e33942}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}header{position:sticky;top:0;background:#101010ed;border-bottom:1px solid #333;z-index:3;padding:22px 7%;display:flex;justify-content:space-between;align-items:center}.brand{font-weight:800;letter-spacing:.08em}nav{display:flex;gap:24px;align-items:center}button{cursor:pointer;border:1px solid #666;background:transparent;color:inherit;padding:10px}.hero{min-height:75vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 20px}.eyebrow{color:var(--red);text-transform:uppercase;letter-spacing:.25em;font-size:12px}h1{font-family:Georgia,serif;font-size:clamp(58px,11vw,140px);font-weight:400;letter-spacing:-.06em;margin:22px 0}h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(38px,6vw,72px)}p{color:var(--muted);line-height:1.8}.cta{display:inline-block;background:var(--fg);color:#111;padding:16px 28px;margin-top:24px;font-weight:bold}.wrap{max-width:1160px;margin:auto;padding:75px 25px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.tile{aspect-ratio:3/4;border:1px solid #353535;background:linear-gradient(145deg,#242424,#131313);display:flex;align-items:center;justify-content:center;text-align:center;color:#777;padding:24px}.filters{display:flex;gap:12px;margin:25px 0}.filters button.active{border-color:var(--red);color:var(--red)}.about{border-top:1px solid #333;border-bottom:1px solid #333}.about p{max-width:650px}footer{padding:40px 7%;display:flex;justify-content:space-between;color:#aaa}@media(max-width:650px){header{padding:18px 5%}nav{gap:10px;font-size:12px}.grid{grid-template-columns:repeat(2,1fr)}.wrap{padding:50px 20px}footer{display:block;text-align:center}}
-</style></head><body><header><a class="brand" href="#">SAITTOO<span style="color:var(--red)">.</span>INK</a><nav><a href="#work" data-pt="Portfólio" data-en="Portfolio">Portfólio</a><a href="#about" data-pt="Sobre" data-en="About">Sobre</a><button id="lang">EN</button></nav></header>
-<main><section class="hero"><div class="eyebrow">Fine Line · Blackwork · Echizen, Japan</div><h1>Saittoo.ink</h1><p data-pt="Arte na sua pele. Traços delicados, histórias únicas." data-en="Art on your skin. Delicate lines, unique stories.">Arte na sua pele. Traços delicados, histórias únicas.</p><a class="cta" href="#work" data-pt="EXPLORAR PORTFÓLIO" data-en="EXPLORE PORTFOLIO">EXPLORAR PORTFÓLIO</a></section>
-<section id="work" class="wrap"><div class="eyebrow">Selected works</div><h2 data-pt="Portfólio" data-en="Portfolio">Portfólio</h2><p data-pt="Em breve: trabalhos originais da Camila." data-en="Coming soon: Camila's original tattoo work.">Em breve: trabalhos originais da Camila.</p><div class="filters"><button class="active" data-filter="all">All</button><button data-filter="fine">Fine Line</button><button data-filter="black">Blackwork</button></div><div class="grid"><div class="tile" data-style="fine">Fine Line<br>Photo coming soon</div><div class="tile" data-style="fine">Fine Line<br>Photo coming soon</div><div class="tile" data-style="black">Blackwork<br>Photo coming soon</div><div class="tile" data-style="fine">Fine Line<br>Photo coming soon</div><div class="tile" data-style="black">Blackwork<br>Photo coming soon</div><div class="tile" data-style="fine">Fine Line<br>Photo coming soon</div></div></section>
-<section id="about" class="about"><div class="wrap"><div class="eyebrow">The artist</div><h2>Camila Saito</h2><p data-pt="Tatuadora em Echizen, Fukui, Japão. Trabalhos com foco em Fine Line e Blackwork. Conheça mais sobre a artista e acompanhe seus projetos no Instagram." data-en="Tattoo artist based in Echizen, Fukui, Japan. Specializing in Fine Line and Blackwork. Follow her latest work on Instagram.">Tatuadora em Echizen, Fukui, Japão. Trabalhos com foco em Fine Line e Blackwork. Conheça mais sobre a artista e acompanhe seus projetos no Instagram.</p><a class="cta" href="https://www.instagram.com/saittoo.ink/" target="_blank" rel="noopener" data-pt="ORÇAMENTOS PELO INSTAGRAM" data-en="INQUIRE ON INSTAGRAM">ORÇAMENTOS PELO INSTAGRAM</a></div></section></main><footer><span>© Saittoo.ink · Camila Saito</span><span>Echizen, Fukui · Japan</span></footer>
-<script>let language='pt';document.getElementById('lang').onclick=()=>{language=language==='pt'?'en':'pt';document.documentElement.lang=language==='pt'?'pt-BR':'en';document.getElementById('lang').textContent=language==='pt'?'EN':'PT';document.querySelectorAll('[data-pt]').forEach(el=>el.textContent=el.dataset[language])};document.querySelectorAll('[data-filter]').forEach(btn=>btn.onclick=()=>{document.querySelectorAll('[data-filter]').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('[data-style]').forEach(tile=>tile.hidden=btn.dataset.filter!=='all'&&tile.dataset.style!==btn.dataset.filter)})</script></body></html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="theme-color" content="#101010">
+        <meta name="description" content="Saittoo.ink — Camila Saito, tattoo artist in Echizen, Fukui, Japan.">
+        <title>Saittoo.ink | Camila Saito</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <a class="brand" href="#">SAITTOO<span style="color:var(--red)">.</span>INK</a>
+            <nav>
+                <a href="#work" data-pt="Portfólio" data-en="Portfolio">Portfólio</a>
+                <a href="#about" data-pt="Sobre" data-en="About">Sobre</a>
+                <button id="lang">EN</button>
+            </nav>
+        </header>
+        <main>
+            <section class="hero">
+                <div class="eyebrow">Fine Line · Blackwork · Echizen, Japan</div>
+                <h1>Saittoo.ink</h1>
+                <p data-pt="Arte na sua pele. Traços delicados, histórias únicas." data-en="Art on your skin. Delicate lines, unique stories.">Arte na sua pele. Traços delicados, histórias únicas.</p>
+                <a class="cta" href="#work" data-pt="EXPLORAR PORTFÓLIO" data-en="EXPLORE PORTFOLIO">EXPLORAR PORTFÓLIO</a>
+            </section>
+            <section id="work" class="wrap">
+                <div class="eyebrow">Selected works</div>
+                <h2 data-pt="Portfólio" data-en="Portfolio">Portfólio</h2>
+                <p data-pt="Em breve: trabalhos originais da Camila." data-en="Coming soon: Camila's original tattoo work.">Em breve: trabalhos originais da Camila.</p>
+                <div class="filters">
+                    <button class="active" data-filter="all">All</button>
+                    <button data-filter="fine">Fine Line</button>
+                    <button data-filter="black">Blackwork</button>
+                </div>
+                <div class="grid">
+                    <div class="tile" data-style="fine">Fine Line<br>Photo coming soon</div>
+                    <div class="tile" data-style="fine">Fine Line<br>Photo coming soon</div>
+                    <div class="tile" data-style="black">Blackwork<br>Photo coming soon</div>
+                    <div class="tile" data-style="fine">Fine Line<br>Photo coming soon</div>
+                    <div class="tile" data-style="black">Blackwork<br>Photo coming soon</div>
+                    <div class="tile" data-style="fine">Fine Line<br>Photo coming soon</div>
+                </div>
+            </section>
+            <section id="about" class="about">
+                <div class="wrap">
+                    <div class="eyebrow">The artist</div>
+                    <h2>Camila Saito</h2>
+                    <p data-pt="Tatuadora em Echizen, Fukui, Japão. Trabalhos com foco em Fine Line e Blackwork. Conheça mais sobre a artista e acompanhe seus projetos no Instagram." data-en="Tattoo artist based in Echizen, Fukui, Japan. Specializing in Fine Line and Blackwork. Follow her latest work on Instagram.">Tatuadora em Echizen, Fukui, Japão. Trabalhos com foco em Fine Line e Blackwork. Conheça mais sobre a artista e acompanhe seus projetos no Instagram.</p>
+                    <a class="cta" href="https://www.instagram.com/saittoo.ink/" target="_blank" rel="noopener" data-pt="ORÇAMENTOS PELO INSTAGRAM" data-en="INQUIRE ON INSTAGRAM">ORÇAMENTOS PELO INSTAGRAM</a>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <span>© Saittoo.ink · Camila Saito</span>
+            <span>Echizen, Fukui · Japan</span>
+        </footer>
+        <script src="js/main.js" defer>
+    </script>
+    <script src="js/language.js" defer>
+</script>
+<script src="js/gallery.js" defer>
+</script>
+</body>
+</html>
