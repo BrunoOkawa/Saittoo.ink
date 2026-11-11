@@ -2,64 +2,122 @@
 <html lang="pt-BR">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta name="theme-color" content="#101010">
-        <meta name="description" content="Saittoo.ink — Camila Saito, tattoo artist in Echizen, Fukui, Japan.">
-        <title>Saittoo.ink | Camila Saito</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#090909">
+        <meta name="description" content="Saittoo.ink — portfólio da tatuadora Camila Saito em Echizen, Fukui, Japão. Fine Line e Blackwork.">
+        <title>Saittoo.ink | Camila Saito — Tattoo Artist</title>
+        <meta property="og:title" content="Saittoo.ink | Camila Saito">
+        <meta property="og:description" content="Fine Line e Blackwork em Echizen, Fukui, Japão.">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="assets/images/logo-saittoo.webp">
+        <link rel="icon" type="image/png" href="assets/images/favicon.png">
         <link rel="stylesheet" href="css/style.css">
+        <script src="js/main.js" defer></script>
+        <script src="js/language.js" defer></script>
+        <script src="js/gallery.js" defer></script>
     </head>
     <body>
-        <header>
-            <a class="brand" href="#">SAITTOO<span style="color:var(--red)">.</span>INK</a>
-            <nav>
+        <header class="site-header">
+            <a class="brand" href="#home" aria-label="Saittoo.ink — início">
+                <img src="assets/images/logo-saittoo.webp" alt="" width="54" height="54">
+                <span>Saittoo<span class="brand-dot">.</span>ink</span>
+            </a>
+            <nav aria-label="Navegação principal">
                 <a href="#work" data-pt="Portfólio" data-en="Portfolio">Portfólio</a>
                 <a href="#about" data-pt="Sobre" data-en="About">Sobre</a>
-                <button id="lang">EN</button>
+                <a href="#contact" data-pt="Contato" data-en="Contact">Contato</a>
+                <button id="lang" type="button" aria-label="Change language">EN</button>
             </nav>
         </header>
         <main>
-            <section class="hero">
-                <div class="eyebrow">Fine Line · Blackwork · Echizen, Japan</div>
-                <h1>Saittoo.ink</h1>
-                <p data-pt="Arte na sua pele. Traços delicados, histórias únicas." data-en="Art on your skin. Delicate lines, unique stories.">Arte na sua pele. Traços delicados, histórias únicas.</p>
-                <a class="cta" href="#work" data-pt="EXPLORAR PORTFÓLIO" data-en="EXPLORE PORTFOLIO">EXPLORAR PORTFÓLIO</a>
-            </section>
-            <section id="work" class="wrap">
-                <div class="eyebrow">Selected works</div>
-                <h2 data-pt="Portfólio" data-en="Portfolio">Portfólio</h2>
-                <p data-pt="Em breve: trabalhos originais da Camila." data-en="Coming soon: Camila's original tattoo work.">Em breve: trabalhos originais da Camila.</p>
-                <div class="filters">
-                    <button class="active" data-filter="all">All</button>
-                    <button data-filter="fine">Fine Line</button>
-                    <button data-filter="black">Blackwork</button>
-                </div>
-                <div class="grid">
-                    <div class="tile" data-style="fine">Fine Line<br>Photo coming soon</div>
-                    <div class="tile" data-style="fine">Fine Line<br>Photo coming soon</div>
-                    <div class="tile" data-style="black">Blackwork<br>Photo coming soon</div>
-                    <div class="tile" data-style="fine">Fine Line<br>Photo coming soon</div>
-                    <div class="tile" data-style="black">Blackwork<br>Photo coming soon</div>
-                    <div class="tile" data-style="fine">Fine Line<br>Photo coming soon</div>
+            <section class="hero" id="home">
+                <div class="hero-art" aria-hidden="true"></div>
+                <div class="hero-copy">
+                    <span class="eyebrow">ECHIZEN · FUKUI · JAPAN</span>
+                    <img class="hero-logo" src="assets/images/logo-saittoo.webp" alt="Logo oficial Saittoo.ink: cachorrinha branca com detalhes vermelhos" width="420" height="420">
+                    <h1>Saittoo<span>.</span>ink</h1>
+                    <p class="hero-kicker">FINE LINE <span>✦</span> BLACKWORK</p>
+                    <p data-pt="Arte que conta histórias. Traços que permanecem." data-en="Art that tells stories. Lines that last.">Arte que conta histórias. Traços que permanecem.</p>
+                    <a class="cta" href="#work" data-pt="EXPLORAR PORTFÓLIO" data-en="EXPLORE PORTFOLIO">EXPLORAR PORTFÓLIO</a>
                 </div>
             </section>
-            <section id="about" class="about">
-                <div class="wrap">
-                    <div class="eyebrow">The artist</div>
-                    <h2>Camila Saito</h2>
-                    <p data-pt="Tatuadora em Echizen, Fukui, Japão. Trabalhos com foco em Fine Line e Blackwork. Conheça mais sobre a artista e acompanhe seus projetos no Instagram." data-en="Tattoo artist based in Echizen, Fukui, Japan. Specializing in Fine Line and Blackwork. Follow her latest work on Instagram.">Tatuadora em Echizen, Fukui, Japão. Trabalhos com foco em Fine Line e Blackwork. Conheça mais sobre a artista e acompanhe seus projetos no Instagram.</p>
-                    <a class="cta" href="https://www.instagram.com/saittoo.ink/" target="_blank" rel="noopener" data-pt="ORÇAMENTOS PELO INSTAGRAM" data-en="INQUIRE ON INSTAGRAM">ORÇAMENTOS PELO INSTAGRAM</a>
+            <section id="work" class="section portfolio">
+                <div class="section-head">
+                    <span class="eyebrow">01 / SELECTED WORKS</span>
+                    <h2 data-pt="Arte na pele" data-en="Art on skin">Arte na pele</h2>
+                    <p data-pt="Uma seleção de tatuagens realizadas por Camila Saito." data-en="A selection of tattoos created by Camila Saito.">Uma seleção de tatuagens realizadas por Camila Saito.</p>
                 </div>
+                <div class="filters" role="group" aria-label="Filtrar tatuagens">
+                    <button type="button" class="active" data-filter="all" data-pt="Todos" data-en="All">Todos</button>
+                    <button type="button" data-filter="fine">Fine Line</button>
+                    <button type="button" data-filter="black">Blackwork</button>
+                    <button type="button" data-filter="color" data-pt="Coloridas" data-en="Color">Coloridas</button>
+                </div>
+                <div class="work-grid">
+                    <button class="work-card" data-style="fine" type="button" data-image="assets/images/flores-vermelhas.webp" data-caption="Flores vermelhas / Red flowers" aria-label="Ampliar Flores vermelhas / Red flowers">
+                        <img src="assets/images/flores-vermelhas.webp" alt="Tatuagem Flores vermelhas / Red flowers realizada por Camila Saito" loading="lazy">
+                        <span class="work-caption">Flores vermelhas <small>Fine Line</small></span>
+                    </button>
+                    <button class="work-card" data-style="black" type="button" data-image="assets/images/espada-sombria.webp" data-caption="Espada sombria / Dark sword" aria-label="Ampliar Espada sombria / Dark sword">
+                        <img src="assets/images/espada-sombria.webp" alt="Tatuagem Espada sombria / Dark sword realizada por Camila Saito" loading="lazy">
+                        <span class="work-caption">Espada sombria <small>Blackwork</small></span>
+                    </button>
+                    <button class="work-card" data-style="black" type="button" data-image="assets/images/anjo.webp" data-caption="Anjo / Angel" aria-label="Ampliar Anjo / Angel">
+                        <img src="assets/images/anjo.webp" alt="Tatuagem Anjo / Angel realizada por Camila Saito" loading="lazy">
+                        <span class="work-caption">Anjo <small>Blackwork</small></span>
+                    </button>
+                    <button class="work-card" data-style="fine" type="button" data-image="assets/images/focus.webp" data-caption="Focus" aria-label="Ampliar Focus">
+                        <img src="assets/images/focus.webp" alt="Tatuagem Focus realizada por Camila Saito" loading="lazy">
+                        <span class="work-caption">Focus <small>Fine Line</small></span>
+                    </button>
+                    <button class="work-card" data-style="black" type="button" data-image="assets/images/foice.webp" data-caption="Foice / Scythe" aria-label="Ampliar Foice / Scythe">
+                        <img src="assets/images/foice.webp" alt="Tatuagem Foice / Scythe realizada por Camila Saito" loading="lazy">
+                        <span class="work-caption">Foice <small>Blackwork</small></span>
+                    </button>
+                    <button class="work-card" data-style="color" type="button" data-image="assets/images/tsurus.webp" data-caption="Tsurus" aria-label="Ampliar Tsurus">
+                        <img src="assets/images/tsurus.webp" alt="Tatuagem Tsurus realizada por Camila Saito" loading="lazy">
+                        <span class="work-caption">Tsurus <small>Color</small></span>
+                    </button>
+                    <button class="work-card" data-style="black" type="button" data-image="assets/images/renda.webp" data-caption="Renda / Lace" aria-label="Ampliar Renda / Lace">
+                        <img src="assets/images/renda.webp" alt="Tatuagem Renda / Lace realizada por Camila Saito" loading="lazy">
+                        <span class="work-caption">Renda <small>Blackwork</small></span>
+                    </button>
+                    <button class="work-card" data-style="black" type="button" data-image="assets/images/lobo.webp" data-caption="Lobo / Wolf" aria-label="Ampliar Lobo / Wolf">
+                        <img src="assets/images/lobo.webp" alt="Tatuagem Lobo / Wolf realizada por Camila Saito" loading="lazy">
+                        <span class="work-caption">Lobo <small>Blackwork</small></span>
+                    </button>
+                    <button class="work-card" data-style="color" type="button" data-image="assets/images/daruma.webp" data-caption="Daruma" aria-label="Ampliar Daruma">
+                        <img src="assets/images/daruma.webp" alt="Tatuagem Daruma realizada por Camila Saito" loading="lazy">
+                        <span class="work-caption">Daruma <small>Color</small></span>
+                    </button>
+                </div>
+            </section>
+            <section id="about" class="section about">
+                <div class="about-photo">
+                    <img src="assets/images/camila-tatuadora.webp" alt="Camila Saito segurando uma máquina de tatuagem" loading="lazy">
+                </div>
+                <div class="about-copy">
+                    <span class="eyebrow">02 / THE ARTIST</span>
+                    <h2>Camila <em>Saito</em></h2>
+                    <p data-pt="Tatuadora em Echizen, Fukui, Japão. Seu trabalho explora a delicadeza do Fine Line e a força expressiva do Blackwork, criando tatuagens com personalidade." data-en="Tattoo artist based in Echizen, Fukui, Japan. Her work explores the delicacy of Fine Line and the expressive strength of Blackwork, creating tattoos with personality.">Tatuadora em Echizen, Fukui, Japão. Seu trabalho explora a delicadeza do Fine Line e a força expressiva do Blackwork, criando tatuagens com personalidade.</p>
+                    <a class="text-link" href="https://www.instagram.com/saittoo.ink/" target="_blank" rel="noopener noreferrer">@saittoo.ink ↗</a>
+                </div>
+            </section>
+            <section id="contact" class="section contact">
+                <span class="eyebrow">03 / CONTACT</span>
+                <h2 data-pt="Sua próxima história começa aqui." data-en="Your next story starts here.">Sua próxima história começa aqui.</h2>
+                <p data-pt="Orçamentos e agendamentos pelo Instagram." data-en="Quotes and appointments via Instagram.">Orçamentos e agendamentos pelo Instagram.</p>
+                <a class="cta" href="https://www.instagram.com/saittoo.ink/" target="_blank" rel="noopener noreferrer" data-pt="ENTRAR EM CONTATO" data-en="GET IN TOUCH">ENTRAR EM CONTATO</a>
             </section>
         </main>
         <footer>
             <span>© Saittoo.ink · Camila Saito</span>
             <span>Echizen, Fukui · Japan</span>
         </footer>
-        <script src="js/main.js" defer>
-    </script>
-    <script src="js/language.js" defer>
-</script>
-<script src="js/gallery.js" defer>
-</script>
-</body>
+        <dialog id="lightbox" aria-label="Visualização da tatuagem">
+            <button id="close-lightbox" type="button" aria-label="Fechar">×</button>
+            <img id="lightbox-image" alt="">
+            <p id="lightbox-caption"></p>
+        </dialog>
+    </body>
 </html>
